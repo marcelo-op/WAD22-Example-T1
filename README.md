@@ -1,5 +1,18 @@
 # Exam example
 
+## Pre-requisites
+Node.js \& NPM
+
+## Clone the repository
+```
+git clone  https://github.com/M-Gharib/WAD2022-Exam-Example.git
+```
+
+## Navigate to the project directory
+```
+cd <project name>
+```
+
 ## Project setup
 ```
 npm install
