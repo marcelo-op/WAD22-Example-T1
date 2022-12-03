@@ -1,7 +1,9 @@
 # Exam example
 
 ## Pre-requisites
+```
 Node.js \& NPM
+```
 
 ## Clone the repository
 ```
