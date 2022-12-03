@@ -2,7 +2,7 @@
 
 ## Pre-requisites
 ```
-Node.js \& NPM
+Node.js & NPM
 ```
 
 ## Clone the repository
