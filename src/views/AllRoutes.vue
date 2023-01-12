@@ -21,7 +21,11 @@
         <td>{{ r.departuredate }}</td>
       </tr>
     </table>
-  </div>
+    </div>
+
+    <footer>
+      <span> We have {{ this.total }} trips today!</span>
+    </footer>
   </div>
 </template>
 
@@ -31,14 +35,18 @@ export default{
   name:"AllRoutes",
   data(){
     return{
-      routes:[]
+      routes:[],
+      total: 0
     }
   },
   methods:{
     fetchRoutes(){
       fetch("http://localhost:3000/api/routes")
       .then((response) => response.json())
-      .then((data) => this.routes = data)
+      .then((data) => {
+        this.routes = data;
+        this.total = data.length
+      })
       .catch((err) => console.log(err))
     }
   },
@@ -76,6 +84,15 @@ th{
 
 .normal{
   background-color: rgb(151, 151, 255);
+}
+
+footer{
+  background-color: gray;
+  padding: 20px;
+}
+
+footer span{
+  font-size: 20px;
 }
 
 </style>
