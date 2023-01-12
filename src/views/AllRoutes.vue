@@ -13,9 +13,10 @@
       </tr>
       
       <tr v-for="r in this.routes" :key="r.id">
-        <td>{{r.fromcity }}</td>
+        <td>{{ r.fromcity }}</td>
         <td>{{ r.tocity }}</td>
-        <td>{{ r.cost }}</td>
+        <td v-if="r.cost > 12" class="caro">{{ r.cost }}</td>
+        <td v-else class="normal"> {{ r.cost }} </td>
         <td>{{ r.departuretime }}</td>
         <td>{{ r.departuredate }}</td>
       </tr>
@@ -67,6 +68,14 @@ th{
   justify-content: center;
   align-content: center;
   padding: 20px;
+}
+
+.caro{
+  background-color: rgb(255, 140, 140);
+}
+
+.normal{
+  background-color: rgb(151, 151, 255);
 }
 
 </style>
